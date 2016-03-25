@@ -473,23 +473,33 @@ select {
 .total {
   border: 1px solid #26c7a9;
   width: 400px;
+  border-collapse:collapse;
   background-color: white;
+  color:gray;
+  font-size:20px;
 }
-.total .chairName {
+.total #chairName, #chairPrice, #totalToPay {
   font-size:25px;
   color:#26c7a9;
+  font-weight:bold;
 }
-
-.total td {
+.total #chairPrice {
+  width:100px;
+  text-align:right;
+}
+.total #colorCost, #upholsteryCost, #deliveryCost {
+  text-align:right;
+}
+.total tr td:first-child {
   border: none;
   border-right:1px solid #26c7a9;
-  
 }
 .total tr {
   border:none;
+  height:35px;
 }
-.total tr:nth-child(2) {
-  border-top:3px solid #26c7a9;
+.total tr:last-child td {
+  border-top:1px solid #26c7a9;
 }
 
 

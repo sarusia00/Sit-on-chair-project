@@ -48,4 +48,90 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     list[indeks].classList.add("visible");    
     });
+  
+  //form
+  
+  var selectChair = document.querySelector(".selectChair");
+  var selectColor = document.querySelector(".selectColor");
+  var selectUphol = document.querySelector(".selectUphol");
+  var delivery = document.getElementById("delivery");
+  var chairName = document.getElementById("chairName");
+  var chairPrice = document.getElementById("chairPrice");
+  var color = document.getElementById("color");
+  var colorCost = document.getElementById("colorCost");
+  var uphol = document.getElementById("upholstery");
+  var upholCost = document.getElementById("upholsteryCost");
+  var deliveryBox = document.getElementById("deliveryCheckbox");
+  var deliveryCost = document.getElementById("deliveryCost")
+  var totalPay= document.getElementById("totalToPay");
+  var toAdd = document.querySelectorAll(".total tr td:nth-child(2)")
+  console.log(toAdd)
+ 
+  var chairPrice = selectChair.getAttribute()
+  function createChair () {
+    
+    if (selectChair.value==="clair"){
+      chairName.innerHTML = "Clair";
+      chairPrice.innerHTML = "1200";
+      
+    } 
+    else if (selectChair.value==="margarita"){
+      chairName.innerHTML = "Margarita";
+      chairPrice.innerHTML = "1500";
+    } 
+    else if (selectChair.value==="selena"){
+      chairName.innerHTML = "Selena";
+      chairPrice.innerHTML = "2000";
+    } 
+  }
+  
+  selectChair.addEventListener("change", createChair);
+  
+  function chooseColor () {
+    
+    if (selectColor.value==="red"){
+      color.innerHTML = "Red";
+      colorCost.innerHTML = "0";
+      
+    } 
+    else if (selectColor.value==="orange"){
+      color.innerHTML = "Orange";
+      colorCost.innerHTML = "0";
+    } 
+    else if (selectColor.value==="black"){
+      color.innerHTML = "Black";
+      colorCost.innerHTML = "50";
+    } 
+  }
+  
+  selectColor.addEventListener("change", chooseColor)
+  
+  function chooseUphol () {
+    
+    if (selectUphol.value==="fabric"){
+      uphol.innerHTML = "Fabric";
+      upholCost.innerHTML = "0";
+      
+    } 
+    else if (selectUphol.value==="leather"){
+      uphol.innerHTML = "Leather";
+      upholCost.innerHTML = "400";
+    }  
+  }
+  
+  selectUphol.addEventListener("change", chooseUphol);
+  
+  function chooseDelivery () {
+    if (deliveryBox.checked) {
+      delivery.innerHTML="Delivery";
+      deliveryCost.innerHTML = "200";
+    }
+    else {
+      delivery.innerHTML="";
+      deliveryCost.innerHTML = "0";
+    }
+  }
+  deliveryBox.addEventListener("change", chooseDelivery);
+  
+  
 });

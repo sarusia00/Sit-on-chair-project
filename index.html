@@ -106,23 +106,26 @@
     <h2>CREATE YOUR OWN CHAIR</h2>
     <div class=selection>
       <div class="choose">
-        <select>
-          <option value="clair">Clair</option>
-          <option value="margarita">Margarita</option>
-          <option value="selena">Selena</option>
+        <select class="selectChair">
+          <option value="0">Choose your chair</option>
+          <option value="clair" data-price="1200">Clair</option>
+          <option value="margarita" data-price="1500">Margarita</option>
+          <option value="selena" data-price="2000">Selena</option>
         </select>
-        <select>
+        <select class="selectColor">
+          <option value="0">Choose your color</option>
           <option value="red">Red</option>
           <option value="orange">Orange</option>
           <option value="black">Black</option>
         </select>
-        <select>
+        <select class=selectUphol>
+          <option value="0">Choose your upholstery</option>
           <option value="fabric">Fabric</option>
           <option value="leather">Leather</option>
         </select>
         <div class="checkbox">
-          <input type="checkbox" id="delivery">
-          <label for="delivery">DELIVERY</label>
+          <input type="checkbox" id="deliveryCheckbox">
+          <label for="deliveryCheckbox">DELIVERY</label>
         </div>
       </div>
       <img id="someChair" src="imagesOk/orange.png" />
@@ -130,12 +133,24 @@
         <h2>To pay</h2>
         <table class="total">
           <tr>
-            <td class="chairName">Your chair</td>
-            <td>Cena</td>
+            <td id="chairName">Your chair</td>
+            <td id="chairPrice"></td>
           </tr>
           <tr>
-            <td>Total</td>
-            <td></td>
+            <td id="color"></td>
+            <td id="colorCost"></td>
+          </tr>
+          <tr>
+            <td id="upholstery"></td>
+            <td id="upholsteryCost"></td>
+          </tr>
+          <tr>
+            <td id="delivery"></td>
+            <td id="deliveryCost"></td>
+          </tr>
+          <tr>
+            <td>TOTAL</td>
+            <td id="totalToPay"></td>
           </tr>
         </table>
         <div class="button">Order</div>
