@@ -22,12 +22,14 @@
           </ul>
         </li>
 
-        <li class="menu">Gallery</li>
-        <!--<ul class="podmenu">
+        <li class="menu">Gallery
+          <ul class="podmenu">
             <li><a href="#">Wrocław</a></li>
             <li><a href="#">Kraków</a></li>
             <li><a href="#">Warszawa</a></li>
-        </ul> -->
+        </ul>
+        </li>
+        
         <li class="menu">Contact</li>
         <!--tu zrobimy scrolla do formularza kontaktowego-->
       </ul>
@@ -35,20 +37,20 @@
   </header>
   <!--Slider section-->
   <section class="article">
-    <div class="znak">&lt;</div>
+    <div class="znak"><a href="#">&lt;</a></div>
     <div class="img">
-      <!-- <ul class="slider">-->
-      <li><img class="chair" src="imagesOk/black_chair.png" /></li>
-      <!--<li><img src="imagesOk/orange.png" /></li>
-             <li><img src="imagesOk/red.png" /></li>-->
-      <!-- </ul>-->
+      <ul class="slider">
+        <li class="visible"><img src="imagesOk/black_chair.png" /></li>
+        <li><img src="imagesOk/orange.png" /></li>
+        <li><img src="imagesOk/red.png" /></li>
+      </ul>
     </div>
     <div class="text">
       <h1>Sit <span>on</span> our <span>chair</span></h1>
       <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis.</p>
       <a href="#">SEE MORE</a>
     </div>
-    <div class="znak znak2">&gt;</div>
+    <div class="znak znak2"><a href="#">&gt;</a></div>
   </section>
 
   <!--Products-->
@@ -60,20 +62,20 @@
       <div class="productName"><span>Chair MARGARITA</span></div>
     </div>
     <div class="opis">
-      <h3><span>Find all inputs</span>span></h3>
+      <h3><span>Find all inputs</span></h3>
       <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Lorem ipsum dolor sit amet enim. Etiam ullamcorper.</p>
     </div>
   </section>
   <!--Prices-->
   <section class="cennik">
-    <h2>CENNIK</h2>
+    <h2>Price list</h2>
     <div class="basicPlan box">
       <div class="circle1"></div>
       <h4>BASIC PLAN</h4>
       <div class="howMuch"><span>85<sup>99</sup></span><br>PLN/MSC</div>
       <div class="whatIncluded">
-        <div class="p1">Zakup towaru+dowóz</div>
-        <div class="p2">Serwis</div>
+        <div class="p1">Delivery</div>
+        <div class="p2">Your own domain</div>
       </div>
       <div class="button btn1">Join</div>
     </div>
@@ -82,9 +84,9 @@
       <h4 class="h4">STANDARD PLAN</h4>
       <div class="howMuch howMuch00"><span>95<sup>99</sup></span><br>PLN/MSC</div>
       <div class="whatIncluded">
-        <div class="p3">Zakup towaru+dowóz</div>
-        <div class="p2">Serwis</div>
-        <div class="p3">Gwarancja 5 lat</div>
+        <div class="p3">Delivery</div>
+        <div class="p2">Your own domain</div>
+        <div class="p3">Warranty 5 years</div>
       </div>
       <div class="button btn2">Join</div>
     </div>
@@ -93,10 +95,10 @@
       <h4>ADVANCED PLAN</h4>
       <div class="howMuch"><span>211<sup>00</sup></span><br>PLN/MSC</div>
       <div class="whatIncluded">
-        <div class="p1">Zakup towaru+dowóz</div>
-        <div class="p2">Serwis</div>
-        <div class="p1">Gwarancja 6 lat</div>
-        <div class="p2">Porady projektanta</div>
+        <div class="p1">Delivery</div>
+        <div class="p2">Your own domain</div>
+        <div class="p1">Warranty 5 years</div>
+        <div class="p2">Counselling</div>
       </div>
       <div class="button btn3">Join</div>
     </div>
@@ -108,9 +110,9 @@
       <div class="choose">
         <select class="selectChair">
           <option value="0">Choose your chair</option>
-          <option value="clair" data-price="1200">Clair</option>
-          <option value="margarita" data-price="1500">Margarita</option>
-          <option value="selena" data-price="2000">Selena</option>
+          <option value="clair">Clair</option>
+          <option value="margarita">Margarita</option>
+          <option value="selena">Selena</option>
         </select>
         <select class="selectColor">
           <option value="0">Choose your color</option>

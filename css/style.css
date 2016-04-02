@@ -34,7 +34,9 @@ header {
   background-color: black;
   text-transform: uppercase;
 }
-
+.container {
+  font-size: 15px;
+}
 .logo span {
   color: #24BA9F;
 }
@@ -50,9 +52,9 @@ header {
 }
 
 .menu {
-  /*display: inline-block;*/
   margin-left: 15px;
   font-weight: bold;
+  padding:0 15px;
 }
 
 .logo {
@@ -67,16 +69,6 @@ header {
   z-index: 1;
 }
 
-.menu {
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.menu:hover {
-  border: 1px solid #24BA9F;
-  padding: 9px;
-}
-
 .mainMenu li {
   position: relative;
 }
@@ -89,12 +81,13 @@ header {
 
 .podmenu {
   padding: 10px;
-  background-color: #24BA9F;
+  background-color: black;
   list-style: none;
   padding: 10px;
   color: white;
   text-decoration: none;
   position: absolute;
+  left:5px;
   visibility: hidden;
   opacity: 0;
   transition: all .3s ease-in-out;
@@ -106,8 +99,8 @@ header {
   text-decoration: none;
 }
 
-.podmenu>li:hover {
-  background-color: #c2c2c2;
+.podmenu>li a:hover {
+  color: #24BA9F;
 }
 
 .podmenu>li:hover>.podmenu {
@@ -120,24 +113,23 @@ header {
 
 .znak {
   display: inline-block;
-  font-size: 60px;
-  color: #24BA9F;
   height: 100%;
   width: 7%;
   line-height: 300px;
   position: relative;
   top: -205px;
-  left: 65px;
+  left: 80px;
+}
+.znak a {
+  text-decoration:none;
+  font-size: 60px;
+  color: #24BA9F;
 }
 
 .znak2 {
   position: relative;
   top: -205px;
   right: -10px;
-}
-
-.container {
-  font-size: 15px;
 }
 
 .article {
@@ -174,7 +166,7 @@ h1 span {
   margin: 0 auto;
 }
 
-.article a {
+.article .text a {
   display: inline-block;
   background-color: #24BA9F;
   color: white;
@@ -182,39 +174,39 @@ h1 span {
   text-decoration: none;
   padding: 15px 45px;
   font-weight: bold;
-  margin-left: 203px;
   margin-top: 30px;
 }
 
-.text,
+
 .img {
+  width:470px;
+  display: inline-block;
+  position: relative;
+  top: 0;
+}
+
+
+.text {
   display: inline-block;
   position: relative;
   top: -45px;
-}
-
-.text {
   height: 350px;
   width: 46%;
-  position: relative;
-  top: -95px;
-}
-
-.slider {
-  display: inline-block;
+  margin:11% 0;
+  text-align:center;
 }
 
 .slider li {
-  display: inline-block;
+  display:none;
   height: 110%;
   width: 110%;
-  position: relative;
 }
-
-.visible {
+.slider .visible {
   display: inline-block;
 }
-
+.slider li:nth-child(2) {
+  padding:35px;
+}
 
 /*Products
 =================================*/
@@ -224,8 +216,7 @@ h1 span {
 .opis {
   display: inline-block;
   margin: 25px;
-  height: 229px;
-  width: 329px;
+  height: 225px;
 }
 
 .produkt1 {
@@ -501,9 +492,17 @@ select {
 .total tr:last-child td {
   border-top:1px solid #26c7a9;
 }
+.toPay h2{
+  margin-bottom:25px;
+  margin-left:0;
+  padding:0;
+}
+.toPay table {
+  margin-bottom: 15px;
+}
 
 
-/*Kontakt
+/*Contact
 ===============================================*/
 
 form {
@@ -559,6 +558,7 @@ input {
   color: white;
   text-decoration: none;
   padding: 10px 80px;
+  margin-left:26px;
 }
 
 *,
