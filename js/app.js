@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
       totalPay.innerHTML = parseFloat(total);
     }
   }
-
+//problem jest taki, że checkbox i option to różne rzecyz. może lepiej każdemu nadać data-price i dodawać wszystkie data price w pliku albo odkryć sposob, zeby dodac wartosc checkboxa ale raz
     function createChair() {
 
       if (selectChair.value === "clair") {
