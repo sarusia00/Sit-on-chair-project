@@ -1,5 +1,5 @@
+//hiding span with chair name
 document.addEventListener("DOMContentLoaded", function () {
-  //pokazywanie i ukrywanie przeźroczystego diva na zdjeciach produktów
   var opacityHide1 = document.querySelector(".produkt2 .productName");
   var produkt1 = document.querySelector(".produkt1");
   var opacityHide2 = document.querySelector(".produkt2 .productName");
@@ -18,12 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
   produkt1.addEventListener("mouseout", showPls);
   produkt2.addEventListener("mouseout", showPls);
 
-  //pokazywanie menu
 
-  //slider
+  //chair slider
 
   var button1 = document.querySelector(".znak a");
-
+  console.log(button1);
   var button2 = document.querySelector(".znak2 a");
   var list = document.querySelectorAll(".slider li");
   var firstChair = document.querySelector(".slider li:first-child");
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var indeks = 0;
 
   button1.addEventListener("click", function () {
-
 
     list[indeks].classList.remove("visible");
     indeks++;
@@ -74,6 +72,15 @@ document.addEventListener("DOMContentLoaded", function () {
   var red = 20;
 
   function addAll() {
+    var total = 0;
+    for (var i = 0; i < pay.length - 1; i++) {
+     var total = total + parseFloat(pay[i].innerHTML) 
+      if (pay[i].innerHTML === "") {
+      { break; }
+      }
+      totalPay.innerHTML = parseFloat(total);
+    }
+  }
 
     function createChair() {
 
@@ -132,16 +139,38 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     deliveryBox.addEventListener("change", chooseDelivery);
 
-    var total = 0;
-    for (var i = 0; i < pay.length - 1; i++) {
-      var total = total + parseFloat(pay[i].innerHTML);
-      console.log(pay[i].innerHTML)
-      totalPay.innerHTML = parseFloat(total);
-    }
-  }
+  
   deliveryBox.addEventListener("change", addAll);
   for (var n=0; n<selectors.length; n++) {
    selectors[n].addEventListener("change", addAll);
   }
-
+  
+//scrolling to contact 
+  
+  var contactBtn = document.querySelector(".menu:last-child a");
+  
+  window.smoothScroll = function (target) {
+    var scrollContainer = target;
+    do {
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+    
+    var targetY = 0;
+    do { 
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+    
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 15);
+    }
+    
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+  
+  
 });
